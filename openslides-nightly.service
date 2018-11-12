@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenSlides Nightly Build
+After=network.target
+
+[Service]
+type=simple
+WorkingDirectory=#PATHTOSCRIPT
+User=#USER
+ExecStart=/bin/bash #PATHTOSCRIPT/run.sh
+ExecStop=/bin/bash #PATHTOSCRIPT/stop.sh
+
+[Install]
+WantedBy=multi-user.target
