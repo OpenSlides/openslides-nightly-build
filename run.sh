@@ -34,7 +34,7 @@ rm -rf node_modules
 echo "Installing node modules"
 npm install --quiet --loglevel=error
 echo "building client"
-ng build --prod
+npm run build
 echo "removing old client"
 rm -rf /usr/share/nginx/html/*
 echo "copying new client data"
